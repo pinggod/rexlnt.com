@@ -1,0 +1,38 @@
+{
+  "name": "rexlnt.com",
+  "version": "1.0.0",
+  "description": "Zeno Sun's personal blog",
+  "private": true,
+  "scripts": {
+    "new": "node ./scripts/new-post.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@mapbox/rehype-prism": "^0.4.0",
+    "@mdx-js/loader": "^1.5.8",
+    "@mdx-js/react": "^1.5.8",
+    "@next/mdx": "^9.3.2",
+    "next": "9.3.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-helmet-async": "^1.0.4",
+    "react-medium-image-zoom": "^4.3.0",
+    "rehype-katex": "^3.0.0",
+    "styled-components": "^5.0.1",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.5",
+    "@types/react": "^16.9.27",
+    "@types/react-dom": "^16.9.5",
+    "@types/styled-components": "^5.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
+    "fs-extra": "^9.0.0"
+  }
+}
