@@ -20,6 +20,7 @@
     "react-helmet-async": "^1.0.4",
     "react-medium-image-zoom": "^4.3.0",
     "rehype-katex": "^3.0.0",
+    "remark-math": "^2.0.1",
     "styled-components": "^5.0.1",
     "typescript": "^3.8.3"
   },
