@@ -16,6 +16,8 @@ export const Wrapper = (props: Post): JSX.Element => {
 export const Pre = Styled.pre`
     position: relative;
     margin: 16px 0;
+    padding: 4px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     overflow-x: scroll;
     tab-size: 4;
@@ -23,7 +25,7 @@ export const Pre = Styled.pre`
 
     code {
         font-size: 12px;
-        font-family: Consolas, Menlo, Monaco, courier, monospace;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
         background: none;
     }
 
@@ -88,11 +90,6 @@ export const Pre = Styled.pre`
         cursor: help;
     }
 `;
-
-
-
-
-
 
 export const InlineCode = Styled.code`
     margin: 0 4px;

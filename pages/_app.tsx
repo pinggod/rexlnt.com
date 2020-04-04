@@ -1,7 +1,7 @@
 import React from 'react';
+import Head from 'next/head';
 import { MDXProvider } from '@mdx-js/react'
 import Styled, { createGlobalStyle } from 'styled-components';
-import { Helmet as Head, HelmetProvider } from 'react-helmet-async';
 import * as MDX from '../components/mdx';
 import Header from '../components/header';
 import Footer from '../components/footer';
@@ -68,7 +68,6 @@ const components = {
     td: MDX.Td,
     th: MDX.Th,
     pre: MDX.Pre,
-    // code: MDX.Code,
     inlineCode: MDX.InlineCode,
     em: MDX.Em,
     strong: MDX.Strong,
@@ -80,7 +79,7 @@ const components = {
 
 const App = ({ Component, pageProps }: any): JSX.Element => {
     return (
-        <HelmetProvider>
+        <>
             <Head>
                 <title>Blog · Zeno Sun</title>
                 <meta name="description" content="Zeno Sun's personal blog" />
@@ -88,9 +87,9 @@ const App = ({ Component, pageProps }: any): JSX.Element => {
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" />
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" />
                 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137858782-1"></script>
-                <script>
-                    {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-137858782-1');`}
-                </script>
+                <script dangerouslySetInnerHTML={{
+                    __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-137858782-1');`,
+                }} />
             </Head>
             <GlobalStyle />
             <Layout>
@@ -100,7 +99,7 @@ const App = ({ Component, pageProps }: any): JSX.Element => {
                 </MDXProvider>
                 <Footer />
             </Layout>
-        </HelmetProvider>
+        </>
     );
 };
 

@@ -1,7 +1,8 @@
 import React from 'react';
+import Head from 'next/head';
 import Styled from 'styled-components';
-import { Helmet as Head } from 'react-helmet-async';
 import { Post } from '../../utils/posts';
+import { formatDate } from '../../utils/date';
 
 const Wrapper = Styled.div`
     margin-bottom: 32px;
@@ -22,7 +23,7 @@ const PostTitle = (props: Post): JSX.Element => (
             <title>{props.meta.title}{` · Zeno Sun's Blog`}</title>
         </Head>
         <Title>{props.meta.title}</Title>
-        <Time>{new Date(props.meta.date).toLocaleDateString()}</Time>
+        <Time>{formatDate(props.meta.date)}</Time>
     </Wrapper>
 );
 

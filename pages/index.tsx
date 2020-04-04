@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Styled from 'styled-components';
 import { posts } from '../utils/posts';
+import { formatDate } from '../utils/date';
 
 const Post = Styled.a`
   display: flex;
@@ -31,7 +32,7 @@ const Home = (): JSX.Element[] | null => {
       <Link passHref key={index} href={post.meta.slug} >
         <Post>
           <Title>{post.meta.title}</Title>
-          <Time>{new Date(post.meta.date).toLocaleDateString()}</Time>
+          <Time>{formatDate(post.meta.date)}</Time>
         </Post>
       </Link>
     );
