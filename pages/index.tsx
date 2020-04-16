@@ -12,7 +12,7 @@ const Post = Styled.a`
 `;
 
 const Title = Styled.h3`
-  display: inline-block;
+  display: inline;
   font-size: 16px;
   font-weight: normal;
 `;
