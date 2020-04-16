@@ -5,14 +5,14 @@ import { posts } from '../utils/posts';
 import { formatDate } from '../utils/date';
 
 const Post = Styled.a`
-  display: flex;
-  align-items: baseline;
+  display: block;
   margin-bottom: 8px;
   color: black;
   text-decoration: none;
 `;
 
 const Title = Styled.h3`
+  display: inline-block;
   font-size: 16px;
   font-weight: normal;
 `;
