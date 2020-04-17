@@ -4,12 +4,22 @@ import ImageWithZoom from "react-medium-image-zoom";
 import PostTitle from '../post-title';
 import { Post } from '../../utils/posts';
 
+const Main = Styled.main`
+    overflow: hidden;
+
+    .katex {
+        color: #1a4876;
+        margin: 0 8px;
+        font-family: Times New Roman, serif;
+    }
+`;
+
 export const Wrapper = (props: Post): JSX.Element => {
     return (
-        <main style={{ overflow: 'hidden' }}>
+        <Main>
             {props.meta && <PostTitle meta={props.meta} />}
             {props.children}
-        </main>
+        </Main>
     );
 };
 
@@ -17,8 +27,8 @@ export const Pre = Styled.pre`
     position: relative;
     margin: 16px 0;
     padding: 4px 16px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 4px;
+    border: 1px solid #eee;
     overflow-x: scroll;
     tab-size: 4;
     hyphens: none;
@@ -95,14 +105,14 @@ export const InlineCode = Styled.code`
     margin: 0 4px;
     padding: 2px 8px;
     border-radius: 4px;
-    background: rgba(0, 0, 0, 0.05);
+    background: rgb(255, 255, 221);
 `;
 
 export const Link = Styled.a.attrs({
     target: '_blank',
     rel: 'noopener noreferrer'
 })`
-    color: black;
+    color: rgb(153, 51, 51);
 `;
 
 export const Image = (props: any): JSX.Element => (
@@ -148,8 +158,7 @@ export const H6 = Styled.h6`
 `;
 
 export const Blockquote = Styled.div`
-    margin: 16px 0 16px 48px;
-    font-family: "Tiempos", Georgia, Zhuyin Kaiti, Han Kaiti, Kai, KaiTi, KaiTi SC, STKaiti, serif;
+    font-family: Zhuyin Kaiti, Han Kaiti, Kai, KaiTi, KaiTi SC, STKaiti, serif;
 
     p {
         margin: 0;

@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         height: 100%;
         font-size: 16px;
+        font-weight: 400;
         line-height: 1.6;
         font-family: 'Source Sans Pro', Arial, sans-serif;
         text-rendering: optimizeLegibility;

@@ -3,11 +3,9 @@ import Link from 'next/link';
 import Styled from 'styled-components';
 
 const A = Styled.a`
-    display: inline-block;
-    margin: 48px 0;
-    padding: 0 8px;
+    display: block;
+    padding: 48px 8px;
     color: white;
-    background-color: black;
     font-size: 16px;
     text-decoration: none;
 `;
