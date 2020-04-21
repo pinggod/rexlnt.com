@@ -1,0 +1,62 @@
+::selection {
+    color: #FFFFFF;
+    background-color: rgb(15, 122, 216);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+html, body,
+h1, h2, h3, h4, h5, h6,
+ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: underline;
+}
+
+button:focus, button:active {
+    outline: none;
+}
+
+/* Fonts - Dancing Script */
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/dancing-script/dancing-script-variable.woff2) format('woff2'),
+    url(https://fonts.gstatic.com/s/dancingscript/v14/If2RXTr6YS-zF4S-kcSWSVi_szLgiuEHiC4W.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Fonts - Public Sans */
+@font-face {
+  font-family: 'Public Sans';
+  font-style: italic;
+  font-weight: 170;
+  font-display: swap;
+  src: 
+    url(/fonts/public-sans/public-sans-italic-variable.woff2) format('woff2'),
+    url(https://fonts.gstatic.com/s/publicsans/v3/ijwTs572Xtc6ZYQws9YVwnNDTJzax8s3Jik.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 144;
+  font-display: swap;
+  src: 
+    url(/fonts/public-sans/public-sans-variable.woff2) format('woff2'),
+    url(https://fonts.gstatic.com/s/publicsans/v3/ijwRs572Xtc6ZYQws9YVwnNGfJ7QwOk1.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

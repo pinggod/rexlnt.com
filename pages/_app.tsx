@@ -1,44 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 import { MDXProvider } from '@mdx-js/react'
-import Styled, { createGlobalStyle } from 'styled-components';
+import Styled from 'styled-components';
 import * as MDX from '../components/mdx';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import 'react-medium-image-zoom/dist/styles.css';
-
-const GlobalStyle = createGlobalStyle`
-    ::selection {
-        color: #FFFFFF;
-        background-color: rgb(15, 122, 216);
-    }
-
-    html, body {
-        width: 100%;
-        height: 100%;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.6;
-        font-family: 'Source Sans Pro', Arial, sans-serif;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    html, body,
-    h1, h2, h3, h4, h5, h6,
-    ul, p {
-        margin: 0;
-        padding: 0;
-    }
-
-    a {
-        text-decoration: underline;
-    }
-
-    button:focus, button:active {
-        outline: none;
-    }
-`;
+import './_app.css';
 
 const Layout = Styled.section`
     display: flex;
@@ -92,7 +60,6 @@ const App = ({ Component, pageProps }: any): JSX.Element => {
                     __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-137858782-1');`,
                 }} />
             </Head>
-            <GlobalStyle />
             <Layout>
                 <Header />
                 <MDXProvider components={components}>

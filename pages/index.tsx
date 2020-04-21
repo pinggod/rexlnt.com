@@ -27,8 +27,6 @@ const Home = (): JSX.Element[] | null => {
     return null;
   }
 
-  console.info('posts: ', posts);
-
   return posts.map((post, index) => {
     return (
       <Link passHref key={index} href={post.meta.slug} >
