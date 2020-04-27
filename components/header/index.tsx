@@ -5,8 +5,8 @@ import Styled from 'styled-components';
 const Wrapper = Styled.header`
     padding: 48px 0;
     font-family: 'Lobster';
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: #FAFAFA;
 `;
 
 const CenterWrapper = Styled.section`
@@ -16,7 +16,7 @@ const CenterWrapper = Styled.section`
 
 const A = Styled.a`
     display: block;
-    color: white;
+    color: black;
     font-size: 36px;
     font-weight: 900;
     text-decoration: none;

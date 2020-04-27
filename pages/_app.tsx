@@ -11,6 +11,11 @@ import './_app.css';
 const Layout = Styled.section`
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+`;
+
+const Main = Styled.main`
+    flex: 1 1 0;    
 `;
 
 const components = {
@@ -56,9 +61,11 @@ const App = ({ Component, pageProps }: any): JSX.Element => {
             </Head>
             <Layout>
                 <Header />
-                <MDXProvider components={components}>
-                    <Component {...pageProps} />
-                </MDXProvider>
+                <Main>
+                    <MDXProvider components={components}>
+                        <Component {...pageProps} />
+                    </MDXProvider>
+                </Main>
                 <Footer />
             </Layout>
         </>
