@@ -11,12 +11,6 @@ import './_app.css';
 const Layout = Styled.section`
     display: flex;
     flex-direction: column;
-    max-width: 800px;
-    margin: 0 auto;
-
-    @media screen and (max-width: 848px) {
-        margin: 0 24px;
-    }
 `;
 
 const components = {

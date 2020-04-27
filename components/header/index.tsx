@@ -4,26 +4,32 @@ import Styled from 'styled-components';
 
 const Wrapper = Styled.header`
     padding: 48px 0;
-    font-family: 'Dancing Script';
+    font-family: 'Lobster';
+    color: white;
+    background-color: black;
+`;
+
+const CenterWrapper = Styled.section`
+    max-width: 800px;
+    margin: 0 auto;
 `;
 
 const A = Styled.a`
-    display: inline-block;
-    color: #222;
-    font-size: 24px;
+    display: block;
+    color: white;
+    font-size: 36px;
+    font-weight: 900;
     text-decoration: none;
-`;
-
-const SubTitle = Styled.p`
-    color: #999;
 `;
 
 const Header = (): JSX.Element => (
     <Wrapper>
-        <Link href='/' passHref>
-            <A>Stop and Go</A>
-        </Link>
-        <SubTitle>coding, gaming, cooking, reading, cycling</SubTitle>
+        <CenterWrapper>
+            <Link href='/' passHref>
+                <A>Stop and Go</A>
+            </Link>
+            <p>coding, gaming, cooking, reading, cycling</p>
+        </CenterWrapper>
     </Wrapper>
 );
 

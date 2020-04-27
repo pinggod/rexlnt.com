@@ -3,6 +3,14 @@
     background-color: rgb(15, 122, 216);
 }
 
+html {
+  background-color: black;
+}
+
+body {
+  background-color: white;
+}
+
 html, body {
     width: 100%;
     height: 100%;
@@ -29,16 +37,16 @@ button:focus, button:active {
     outline: none;
 }
 
-/* Fonts - Dancing Script */
+/* Fonts - Lobster */
 @font-face {
-  font-family: 'Dancing Script';
+  font-family: 'Lobster';
   font-style: normal;
-  font-weight: 500;
   font-display: swap;
-  src: url(/fonts/dancing-script/dancing-script-variable.woff2) format('woff2'),
-    url(https://fonts.gstatic.com/s/dancingscript/v14/If2RXTr6YS-zF4S-kcSWSVi_szLgiuEHiC4W.woff2) format('woff2');
+  src: url(/fonts/lobster/lobster.woff2) format('woff2'), 
+    url(https://fonts.gstatic.com/s/lobster/v22/neILzCirqoswsqX9zoKmM4MwWJU.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* Fonts - Public Sans */
 @font-face {
   font-family: 'Public Sans';
