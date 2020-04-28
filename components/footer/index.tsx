@@ -2,7 +2,7 @@ import React from 'react';
 import Styled from 'styled-components';
 
 const Wrapper = Styled.footer`
-    padding: 48px 0;
+    padding: 48px 24px;
     color: black;
     background-color: #FAFAFA;
     text-align: center;

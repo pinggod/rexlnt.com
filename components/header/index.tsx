@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Styled from 'styled-components';
 
 const Wrapper = Styled.header`
-    padding: 48px 0;
+    padding: 48px 24px;
     color: black;
     background-color: #FAFAFA;
 `;

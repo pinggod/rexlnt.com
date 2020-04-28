@@ -12,10 +12,16 @@ const Layout = Styled.section`
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
+    background-color: white;
 `;
 
 const Main = Styled.main`
-    flex: 1 1 0;    
+    flex: 1 1 0;
+    margin: 0 auto;
+    padding: 48px 24px;
+    width: 100%;
+    max-width: 800px;
 `;
 
 const components = {
