@@ -58,7 +58,7 @@ const App = ({ Component, pageProps }: any): JSX.Element => {
                 <title>Blog · Zeno Sun</title>
                 <meta name="description" content="Zeno Sun's personal blog" />
                 <link rel="shortcut icon" href="/favicon.jpg"></link>
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" />
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/source-sans-pro@3.6.0/source-sans-pro.css" />
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css" />
                 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137858782-1"></script>
                 <script dangerouslySetInnerHTML={{
