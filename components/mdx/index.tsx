@@ -105,7 +105,7 @@ export const InlineCode = Styled.code`
     margin: 0 4px;
     padding: 2px 8px;
     border-radius: 4px;
-    background: rgb(255, 255, 221);
+    background: #F0F0F0;
 `;
 
 export const Link = Styled.a.attrs({
@@ -130,31 +130,37 @@ export const P = Styled.div`
 export const H1 = Styled.h1`
     font-size: 22px;
     font-weight: bold;
+    margin: 1em 0;
 `;
 
 export const H2 = Styled.h2`
     font-size: 22px;
     font-weight: bold;
+    margin: 1em 0;
 `;
 
 export const H3 = Styled.h3`
     font-size: 22px;
     font-weight: bold;
+    margin: 1em 0;
 `;
 
 export const H4 = Styled.h4`
     font-size: 18px;
     font-weight: bold;
+    margin: 1em 0;
 `;
 
 export const H5 = Styled.h5`
     font-size: 18px;
     font-weight: bold;
+    margin: 1em 0;
 `;
 
 export const H6 = Styled.h6`
     font-size: 18px;
     font-weight: bold;
+    margin: 1em 0;
 `;
 
 export const Blockquote = Styled.div`

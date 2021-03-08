@@ -1,12 +1,10 @@
----
-title: JSON Schema
-description: A JSON based format for defining the structure of JSON data
-date: '2019-09-12T02:46:50.792Z'
----
+export const meta = {
+    title: "JSON Schema",
+    date: '2019-09-12T02:46:50.792Z',
+    slug: '/posts/json-schema'
+}
 
 JSON Schema(`media type: application/schema+json`) 是一种**基于 JSON 格式**、**描述 JSON 数据结构**的规范。JSON Schema 描述了 JSON 数据的结构层次、字段类型、键值约束，可以用于数据校验、文档生成、超链接导航（hyperlink navigation）和基于 JSON 数据的交互控制（比如输入关键字的联想），其精准的数据定义可以辅助开发者和开发工具安全、高效地处理 JSON 数据。
-
----
 
 ## Core
 
@@ -122,8 +120,6 @@ JSON Schema 基于 [json-reference](https://tools.ietf.org/html/draft-pbryan-zyp
 - `Canonical dereferencing`，解析器直接基于 URI 请求数据内容
 - `inline dereferencing`，解析器通过查找发现 `"http://my.site/schema1#"` 在当前 JSON Schema 文档内，则直接使用
 
----
-
 ## Validation
 
 这一部分介绍校验 JSON Schema 文档有效性的详细规则，对应 JSON Schema 版本列表中的 Validation 部分——内容以社区中支持最广泛的 JSON Schema Draft 04 为主。
@@ -231,8 +227,6 @@ JSON Schema 基于 [json-reference](https://tools.ietf.org/html/draft-pbryan-zyp
 - `ipv4`，字符串，符合 [RFC 2673 定义](https://tools.ietf.org/html/rfc2673#section-3.2)
 - `ipv6`，字符串，符合 [RFC 2373 定义](https://tools.ietf.org/html/rfc2373#section-2.2)
 - `uri`，字符串，符合 [RFC 3986 定义](https://tools.ietf.org/html/rfc3986)
-
----
 
 ## References
 

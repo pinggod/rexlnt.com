@@ -1,16 +1,17 @@
----
-title: Color Size Clip Background
-description: CSS 阶段性复习
-date: '2016-10-08T07:59:36.000Z'
----
+export const meta = {
+    title: "Color Size Clip Background",
+    date: '2016-10-08T07:59:36.000Z',
+    slug: '/posts/css-color-size-clip-background'
+}
+
 
 这篇文章记录的是一些我很少使用的 CSS 属性，而这些属性正在流行起来……
 
 ## color
 
-CSS 中的颜色值有多种表示方式，常见方式是：关键字（<span style="display: inline-block; width: 18px; height: 18px; margin: 0 4px; background-color: pink; border-radius: 3px; vertical-align: text-top;"></span>pink）、十六进制（<span style="display: inline-block; width: 18px; height: 18px; margin: 0 4px; background-color: #D4838F; border-radius: 3px; vertical-align: text-top;"></span>#D4838F）、RGB（<span style="display: inline-block; width: 18px; height: 18px; margin: 0 4px; background-color: rgba(234, 79, 108, 1); border-radius: 3px; vertical-align: text-top;"></span>rgba(234, 79, 108, 1)）和 HSL（<span style="display: inline-block; width: 18px; height: 18px; margin: 0 4px; background-color: hsla(337, 50%, 42%, 1); border-radius: 3px; vertical-align: text-top;"></span>hsla(337, 50%, 42%, 1)）。在这里重点要介绍的是 HSL 的表示方式，这里的 HSL 分别是指色相（Hue, H）、饱和度（Saturation, S）和明度（Lightness, L）。为什么要强调这种方式呢？因为它可以更好的记忆：
+CSS 中的颜色值有多种表示方式，常见方式是：关键字（pink）、十六进制（#D4838F）、RGB（rgba(234, 79, 108, 1)）和 HSL（hsla(337, 50%, 42%, 1)）。在这里重点要介绍的是 HSL 的表示方式，这里的 HSL 分别是指色相（Hue, H）、饱和度（Saturation, S）和明度（Lightness, L）。为什么要强调这种方式呢？因为它可以更好的记忆：
 
-![color-wheel-hsl-fixed-lightness-three.png](./color-wheel-hsl-fixed-lightness-three.png)
+![/assets/color-wheel-hsl-fixed-lightness-three.png](/assets/color-wheel-hsl-fixed-lightness-three.png)
 
 - H 色相的属性值范围为 0~360，指示的颜色依次是红橙黄绿青蓝紫
 - S 饱和度的属性值范围为 0%~100%，值越大，颜色越亮越鲜艳；值越小，颜色越黑越暗淡

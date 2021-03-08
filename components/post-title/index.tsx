@@ -10,7 +10,7 @@ const Wrapper = Styled.div`
 
 const Title = Styled.h1`
     font-size: 24px;
-    font-weight: normal;
+    font-weight: bold;
 `;
 
 const Time = Styled.time`

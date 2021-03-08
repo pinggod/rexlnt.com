@@ -22,6 +22,7 @@ const Main = Styled.main`
     padding: 48px 24px;
     width: 100%;
     max-width: 800px;
+    box-sizing: border-box;
 `;
 
 const components = {

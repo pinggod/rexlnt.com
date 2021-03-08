@@ -1,8 +1,8 @@
----
-title: Persistent Data Structure
-description: Data cannot be changed once created
-date: 2019-12-23T15:01:40.184Z
----
+export const meta = {
+    title: "持久化数据结构",
+    date: '2019-12-23T15:01:40.184Z',
+    slug: '/posts/persistent-data-structure'
+}
 
 Persistent Data Structure（持久化数据结构）一旦创建，就无法通过增加、删除、更新操作修改现有数据，只会产生新的实例，比如：
 
@@ -19,8 +19,6 @@ map2.get('b'); // 50
 - 为开发者提供了可预测性，无需担心数据经过某些逻辑之后发生「变异」；
 - 在保持数据不可变性的基础上，更小的内存空间占用，比如同样对一个持久化的 Map 进行一千次更新操作，持久化数据结构通过结构共享的方式可以减少内存占用；
 - 其他优势有待实践给出说明，此处不提；
-
-<!-- more -->
 
 ## Map
 
@@ -40,7 +38,7 @@ map2.get('b'); // 50
 
 使用数组、链表、串（链表的元素是固定长度的数组）实现，以数组为例：
 
-![](./array.png)
+![](/assets/array.png)
 
 偶数位存储 key，奇数位存储 value，模拟了对 Map 的存储，支持任意值作为 key，最大缺点是随机访问性差，时间复杂度为 O(n)。
 
@@ -48,13 +46,13 @@ map2.get('b'); // 50
 
 想要降低时间复杂度，可以尝试使用二叉搜索树实现：
 
-![](./binary-search-tree.png)
+![](/assets/binary-search-tree.png)
 
 在上图的二叉搜索树中，使用节点存储 kv 信息，同时对 k 计算一个摘要数字用于确定起在二叉树中的位置。如果是用一组排序好的数据构建二叉搜索树，就会如图中黄色节点所示，退化为链表，此时二叉搜索树最坏情况下时间复杂度为 O(n) 而不是 O($log_2 N$)。
 
 将二叉搜索树演进为自平衡二叉树即可保证 O($log_2 N$) 的时间复杂度，比如红黑树：
 
-![](./red-black-tree.png)
+![](/assets/red-black-tree.png)
 
 红黑树是经典的持久化数据结构实现方案，具有良好的最坏时间复杂度 O($log_2 N$)、空间使用率（持久化版本需要 O($log_2 N$)），同时支持 key 为任意值。
 
@@ -64,21 +62,21 @@ map2.get('b'); // 50
 
 Trie Tree 又称前缀树或字典树，与二叉树不同，数据不直接存储在节点中，同一节点的子节点具有相同的前缀，根节点为空字符串：
 
-![](./trie-tree1.png)
+![](/assets/trie-tree1.png)
 
 上面是 Trie 树的概念模型，在真实的实现中更接近下图：
 
-![](./trie-tree2.png)
+![](/assets/trie-tree2.png)
 
 `aba` / `cbaa` / `cdd` 三个单词由 `a / b / c / d` 四个元素组成，可以构建一颗每个节点包含四个元素的 Tire 树。Trie 树最大的优势是时间复杂度为 O($log_m N$)，其中 m 为树的分支数，N 为可表示的最大数据量，但从图中也可以看出 Trie 树中存在大量空节点，容易成为稀疏矩阵。
 
 解决 Trie 树成为稀疏矩阵的方案有很多，比如 Ternary Search Tree、Array Mapped Trie（AMT）。以 AMT 为例：
 
-![](./array-mapped-trie1.png)
+![](/assets/array-mapped-trie1.png)
 
 上图左侧演示的是如何压缩一个稀疏节点，右侧是 Trie 树转变为 AMT 之后的结构。对单个节点的压缩核心策略是使用一个 Bitmap 记录当前节点的使用情况，如果使用标记 1，未使用则标记 0，因此在遍历 AMT 树的时候需要额外做两件事（判定是否有值和值在哪）：
 
-![](./array-mapped-trie2.png)
+![](/assets/array-mapped-trie2.png)
 
 - 通过 `bitmap` 与 `offset("c")` 的与运算判断值是否存在；
 - 通过 `bitmap` 与 `offset("c") - 1` 的与运算可以得到一个二进制，该二进制中 1 的个数（汉明重量）即为 `"c"` 的值的位置；
@@ -89,11 +87,11 @@ AMT 在时间复杂度上保持了 Trie 的 O($log_m N$)，同时降低了空间
 
 HAMT（Hash + AMT）在 AMT 的基础上，首要支持了 key 为任意值，核心策略是使用 hash 计算任意值的摘要信息并最终转换为二进制表示，以 5bit 为一组构建 AMT：
 
-![](./hamt1.png)
+![](/assets/hamt1.png)
 
 HAMT 并不是只使用 Bitmap 一种方式，组成 HAMT 的五种节点：
 
-![](./hamt2.png)
+![](/assets/hamt2.png)
 
 HAMT 的压缩机制：
 
